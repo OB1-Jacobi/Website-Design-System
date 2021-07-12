@@ -1,0 +1,164 @@
+/* header */
+a {
+    text-decoration: none;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: black solid;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+#colors {
+    margin-top: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* color section */
+.color1 {
+    background-color: #A17703;
+    color: cornsilk;
+}
+
+.color2 {
+    background-color: #00F0AC;
+    color: black;
+}
+
+.color3 {
+    background-color: #EDB51C;
+    color: cornsilk;
+}
+
+.color4 {
+    background-color: #CE05ED;
+    color: black;
+}
+
+.color5 {
+    background-color: #8D0BA1;
+    color: cornsilk;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+.crimson {
+    background-color: crimson;
+}
+
+.crimson>p {
+    font-family: 'Crimson Text', serif;
+}
+
+.quicksand {
+    background-color: sandybrown;
+}
+
+.quicksand>p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.mono {
+    background-color: darkolivegreen;
+}
+
+.mono>p {
+    font-family: 'Major Mono Display', monospace;
+}
+
+/* text styles */
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'Crimson Text', serif;
+    align-self: center;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 22px;
+    font-family: 'Crimson Text', serif;
+    align-self: center;
+}
+
+h3 {
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    grid-area: head;
+    align-self: center;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    align-self: center;
+}
+
+#text {
+    border: black solid;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 60px repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header""h1 h2""h3 p";
+    gap: 10px;
+}
+
+#text>h2 {
+    grid-area: header;
+    align-self: center;
+}
+
+.heading,
+.subheading,
+.sub-subheading,
+.paragraph {
+    border: black solid;
+    width: auto;
+    padding: 10px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "head content";
+    background-color: lemonchiffon;
+}
+
+ul {
+    grid-area: content;
+    align-self: center;
+}
+
+.heading {
+    grid-area: h1;
+}
+
+.subheading {
+    grid-area: h2;
+}
+
+.sub-subheading {
+    grid-area: h3;
+}
+
+.paragraph {
+    grid-area: p;
+}
